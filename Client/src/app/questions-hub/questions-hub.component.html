@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <h1>{{ titleText }}</h1>
+
+  <div class="row" *ngIf="currentQuestion !== undefined">
+    <div class="form-group">
+      {{ currentQuestion.QuestionText }}
+      <div *ngFor="let option of currentQuestion.Options">
+        <div class="radio">
+          <label><input type="radio" name="optradio" (change)="onItemChange(option)"/>{{ option }}</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    </div>
+  </div>
+</div>

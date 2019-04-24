@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <h1>Admin Panel</h1>
+    <button class="btn btn-primary" *ngIf="currentQuestion === undefined" (click)="startVoting()">Start Voting</button>
+    <button class="btn btn-primary" *ngIf="currentId === (allQuestions.length - 1)" (click)="showResponses()">Show Responses</button>
+
+    <div class="row" *ngIf="currentQuestion !== undefined">
+      <div class="form-group">
+        {{ currentQuestion.QuestionText }}
+        <div *ngFor="let option of currentQuestion.Options">
+          <div class="radio">
+            <label><input type="radio" name="optradio" />{{ option }}</label>
+          </div>
+        </div>
+        <button class="btn btn-primary" *ngIf="currentId > 0" (click)="showPreviousQuestion(currentQuestion.QuestionId)">Show Previous</button>
+        <button class="btn btn-primary" *ngIf="currentId < (allQuestions.length - 1)" (click)="showNextQuestion(currentQuestion.QuestionId)">Show Next</button>
+      </div>
+    </div>
+    <div class="row" *ngFor="let client of currentClients">
+      <label>{{ client }} just joined!</label>
+    </div>
+  </div>

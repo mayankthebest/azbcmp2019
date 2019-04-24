@@ -1,0 +1,30 @@
+[
+  {
+    "QuestionId": 1,
+    "QuestionText": "Azure Functions is a serverless compute service that enables you to run code on-demand without having to explicitly provision or manage infrastructure. True or False?",
+    "Options": ["True", "False"],
+    "CorrectResponse": "True",
+    "IsFinalQuestion": false
+  },
+  {
+    "QuestionId": 2,
+    "QuestionText": "Which of these languages are not supported in Azure Function?",
+    "Options": ["C#", "Java", "JavaScript", "F#", "Pyhton", "PHP"],
+    "CorrectResponse": "PHP",
+    "IsFinalQuestion": false
+  },
+  {
+    "QuestionId": 3,
+    "QuestionText": "What is the maximum allowed value of Azure Function Timeout in a Consumption Plan?",
+    "Options": ["5 seconds", "2 seconds", "10 seconds"],
+    "CorrectResponse": "10 seconds",
+    "IsFinalQuestion": false
+  },
+  {
+    "QuestionId": 4,
+    "QuestionText": "How are you liking the Azure Bootcamp so far?",
+    "Options": ["Love it!", "Hate it", "Don't care"],
+    "CorrectResponse": "Love it!",
+    "IsFinalQuestion": true
+  }
+]

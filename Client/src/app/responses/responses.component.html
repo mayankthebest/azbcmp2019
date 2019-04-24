@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <h1>Results</h1>
+  <div class="row" *ngFor="let result of results">
+    <label type="text" id="question" class="form-control">{{ result.QuestionText }}</label>
+    <ul>
+      <li *ngFor="let res of result.Options">
+        {{ res.OptionText }} - {{ res.NoOfResponses }}
+      </li>
+    </ul>
+    <br/>
+    <span style="font-weight:bold;">
+      Correct Answer - {{ result.CorrectResponse }}
+    </span>
+  </div>
+</div>
